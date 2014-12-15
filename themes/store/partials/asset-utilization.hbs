@@ -1,0 +1,21 @@
+<div style="text-align:center">
+    {{#if cuser.username}}
+        {{#with assets}}
+            <input type="button" class="btn-use-recipe" onclick="goToRecipeApp()"
+                   data-toggle="modal"
+                   data-aid="{{id}}"
+                   data-type="{{type}}" value="{{t "Use This Recipe"}}">
+            {{#attributes }}
+                <input id="redirectUrlToRecipeApp" type="hidden"
+                       value="{{url "/../publisher"}}/asts/dish/create_dish?resources={{overview_url}}"/>
+            {{/attributes }}
+        {{/with}}
+    {{/if}}
+</div>
+
+<script>
+    function goToRecipeApp() {
+        var redirect = document.getElementById('redirectUrlToRecipeApp').value;
+        window.location.href = redirect;
+    }
+</script>

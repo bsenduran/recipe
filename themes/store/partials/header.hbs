@@ -1,0 +1,38 @@
+<div class="wr-header" id="container-header">
+    <div class="wr-header-inner">
+    <div class="left-brand">
+        <a href="{{url "/"}}" class="brand"><span>iPaaS</span></a>
+    </div>
+
+    <div class="right-links">
+        <div class="ctrl-tn">
+
+			{{#if cuser.username}}
+							<div class="btn-user-logged-in">
+							<span class="tn-sep"></span>
+								<a href="{{url "/../publisher/asts/dish/dashboard"}}" class="btn-my-cafe"><i class="icon-coffee icon-white">&nbsp;</i>{{t "My Cafe"}}</a>
+								<span class="tn-sep"></span>
+								<a href="#" class="tn-welcome"><i class="icon-user icon-white">&nbsp;</i>welcome, <b>{{cuser.username}} </b></a>
+								<span class="tn-sep"></span>
+								{{signout .}}
+							</div>
+							{{else}}
+							<div class="btn-user-not-logged-in">
+							    <span class="tn-sep"></span>
+								<a href="{{url "/login"}}" class="btn-sign-inx"><i class="icon-signin icon-white">&nbsp;</i>{{t "Sign in"}}</a>
+								<span class="tn-sep"></span>
+								<a href="{{url "/login"}}" id="btn-register" class="btn-registerx"><i class="icon-chevron-sign-up icon-white">&nbsp;</i>{{t "Register"}}</a>
+							</div>
+							{{/if}}
+
+        </div>
+    </div>
+    </div>
+    <br class="c-both" />
+</div>
+
+
+
+{{>login login}}
+{{>register}}
+

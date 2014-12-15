@@ -1,0 +1,27 @@
+
+        <h4 class="h-right-nugget"><i class="icon-time"></i>{{t "Recently Added"}}</h4>
+        <div class="wr-recent-assets">
+        {{#slice recentAssets count="20" size="20"}}
+            {{#each .}}
+                <div class="sub-side-assets">
+                    {{#attributes}}
+                        <div class="sub-side-asset-img">
+                            <a href="{{url "/assets"}}/{{../type}}/{{../id}}"><img src="{{#if overview_thumbnail}}{{overview_url}}/{{overview_thumbnail}}{{/if}}"></a>
+                        </div>
+                        <div class="sub-side-asset-desc">
+
+                            <span class="t-sub-side-asset"><a href="{{url "/assets"}}/{{../type}}/{{../id}}">{{overview_name}}</a></span><br />
+                            <span class="sub-asset-author">by <a href="#">{{overview_creator}}</a></span>
+                            <span class="star-rating">
+                            	<div class="asset-rating">
+                                    <!--<div class="asset-rating-{{../rating}}star"></div>-->
+                                    <div style="width:{{../ratingPx}}px"></div>
+                                </div>
+                            </span>
+                        </div>
+                        <br class="c-both" />
+                    {{/attributes}}
+                </div>
+            {{/each}}
+        {{/slice}}
+        </div>

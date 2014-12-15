@@ -1,0 +1,47 @@
+<h2 class="h-page-title">All Recipes</h2>
+    <div class="top-asset-slideshow-cont">
+        <div class="html_carouselx">
+            <div class="assetSliderx" id="top-asset-slideshow-{{type}}">
+                {{#if assets}}
+                    {{#each assets}}
+                        {{#attributes}}
+                            <div class="ctrl-thumb-asset" data-id="{{../id}}" data-type="{{../type}}">
+
+                                <a href="#">
+                                    <div class="lbl-thumb-asset-img">
+                                        <a href="{{url "/asts"}}/{{../type}}/details/{{../id}}"><img
+                                                src="{{#if overview_thumbnail}}{{overview_url}}/{{overview_thumbnail}}{{/if}}">
+                                        </a>
+                                    </div>
+                                </a>
+
+                                <div>
+                                    <div class="lbl-thumb-asset-title">
+                                        <a href="{{url "/asts"}}/{{../type}}/details/{{../id}}"><span>{{overview_name}}</span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <ul>
+                                            <li>
+                                                <span class="lbl-thumb-asset-author">by <a href="#">{{overview_creator}}</a></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="asset-rating">
+                                        <div class="asset-rating-{{../rating/average}}star">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        {{/attributes}}
+                    {{/each}}
+                {{else}}
+                    <div class="top-assets-empty-assert">{{t "We couldn't find anything for you."}}</div>
+                {{/if}}
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
