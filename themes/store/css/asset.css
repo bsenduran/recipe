@@ -40,12 +40,7 @@ body .store-left {
 }
 .assetp-properties .tab-content {
 }
-#tab-reviews {
-    position: absolute;
-    display: block;
-    visibility: hidden;
-    top:-9999px;
-}
+
 
 #tab-reviews li {
     background: none repeat scroll 0 0 transparent;
