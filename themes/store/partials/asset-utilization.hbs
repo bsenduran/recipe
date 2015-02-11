@@ -6,7 +6,7 @@
                    data-type="{{type}}" value="{{t "Use This Recipe"}}">
             {{#attributes }}
                 <!--secondary ES publisher's url-->
-                <input id="redirectUrlToRecipeApp" type="hidden" value="https://localhost:9443/publisher/asts/dish/create_dish?resources={{overview_url}}"/>
+                <input id="redirectUrlToRecipeApp" type="hidden" value="{{url "/.."}}/publisher/asts/dish/create_dish?resources={{overview_url}}"/>
             {{/attributes }}
         {{/with}}
 </div>
