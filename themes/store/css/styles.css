@@ -112,8 +112,20 @@
     color:#aaa;
 }
 
+.social-button {
+    width:35px;
+}
 
+#social-buttons {
+    width: 40%;
+    padding-bottom: 20px;
+    float: left;
+    padding-left: 20px;
+}
 
+#social-button-div {
+    margin-left: 0px;
+}
 
 
 @media screen {
