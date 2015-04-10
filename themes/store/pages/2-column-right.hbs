@@ -48,8 +48,10 @@
          <h1>Integration Cloud</h1>
     </div>
     <div class="wr-ip-right">
-        <a href="{{url ""}}/../publisher/asts/recipe/list" class="btn-recipe-store"><i class="icon-plus-sign icon-white"></i>&nbsp;Create a new template </a>
-        <!--<a href="{{url ""}}/" class="btn-recipe-store"><i class="icon-shopping-cart icon-white"></i>&nbsp;Go to recipe store </a>-->
+        {{#if this.navigation.[0].context.cuser.username}}
+            <a href="{{url ""}}/../publisher/asts/recipe/list" class="btn-recipe-store"><i class="icon-plus-sign icon-white"></i>&nbsp;Create a new template </a>
+            <!--<a href="{{url ""}}/" class="btn-recipe-store"><i class="icon-shopping-cart icon-white"></i>&nbsp;Go to recipe store </a>-->
+        {{/if}}
     </div>
     <br class="c-both" />
 </div>
