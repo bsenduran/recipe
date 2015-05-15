@@ -64,7 +64,8 @@
     height:260px;
     width:200px;
     float:left;
-    margin-right:16px
+    margin-right:16px;
+	margin-right:20px;
 }
 
 .ctrl-thumb-asset a:hover {
@@ -72,6 +73,8 @@
 }
 
 .lbl-thumb-asset-img img {
+	border-radius:4px;
+/*
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
@@ -80,9 +83,11 @@
     -webkit-box-shadow: rgba(0,0,0,0.2) 0 0 0 1px,rgba(0,0,0,0.3) 0 2px 5px;
     -moz-box-shadow: rgba(0,0,0,0.2) 0 0 0 1px,rgba(0,0,0,0.3) 0 2px 5px;
     box-shadow: rgba(0,0,0,0.2) 0 0 0 1px,rgba(0,0,0,0.3) 0 2px 5px;
+*/
 }
 
 .lbl-thumb-asset-img:hover {
+/*
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
@@ -91,6 +96,7 @@
     -webkit-box-shadow: rgba(0,0,0,0.2) 0 0 0 1px,rgba(0,0,0,0.3) 0 3px 5px;
     -moz-box-shadow: rgba(0,0,0,0.2) 0 0 0 1px,rgba(0,0,0,0.3) 0 3px 5px;
     box-shadow: rgba(0,0,0,0.2) 0 0 0 1px,rgba(0,0,0,0.3) 0 3px 5px;
+*/
 }
 
 .lbl-thumb-asset-title {
@@ -99,8 +105,9 @@
 
 .lbl-thumb-asset-title span {
     font-weight:300;
-    font-size:18px;
-    color:#333
+    font-size:16px;
+    color:#333;
+	word-wrap:break-word;
 }
 
 .lbl-thumb-asset-author {
@@ -1313,11 +1320,11 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
 }
 
 .asset-banner {
-    height: 205px;
-    width: 637px;
+    height: 225px;
+    width: 645px;
     left: 0;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 4px;
     margin-top:0px;
 }
 .asset-intro-box {
@@ -1327,10 +1334,7 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     height: 50px;
     left: 0;
     padding: 10px;
-    border-left: 1px solid #ECF0F1;
-    border-bottom: 1px solid #ECF0F1;
-    background: #FFFFFF;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+
     display: none;
 }
 div.rating-cancel, div.star-rating {
@@ -1498,7 +1502,7 @@ div.rating-cancel, div.star-rating {
 
 .nav-tabs > li > a {
     font-weight: 200;
-    border-radius: 8px;
+    border-radius: 4px;
 
     font-size: 13px;
     color: #333;
@@ -1704,16 +1708,17 @@ a.btn-sign-in:hover {
 }
 
 input.btn-use-recipe {
+	font-family:"Open Sans";
     display: inline-block;
     background: #5fb548;
-    border-radius: 50px;
     color: #ffffff;
-    font-weight: 700;
+    font-weight: 100 !important;
     font-size: 16px;
     padding: 25px 30px;
     border:0px solid #fff;
     left:0;
     right:0;
+	border-radius:4px;
 }
 
 input.btn-use-recipe:hover {
@@ -1864,11 +1869,11 @@ input.btn-use-recipe:hover {
 }
 
 .wr-ipaas .wr-ip-left h1 {
-    font-size:22px;
-    font-weight:500;
-    margin:0;
-    color:#333;
-    letter-spacing: -1px;
+	font-weight: 500;
+    font-size: 19px;
+    margin: 0;
+    color: #333;
+    text-transform: uppercase;
 }
 
 .wr-ipaas .wr-ip-left .brand span {
@@ -1880,7 +1885,7 @@ input.btn-use-recipe:hover {
 .btn-recipe-store {
     display: inline-block;
     background: #f57b20;
-    border-radius: 50px;
+
     color: #ffffff !important;
     font-weight: 400;
 
@@ -1931,7 +1936,7 @@ input.btn-use-recipe:hover {
 }
 
 .wr-main-extra {
-    border-radius:7px;
+    border-radius:5px;
     background:#fff;
     padding:15px 15px;
 }
@@ -1973,13 +1978,16 @@ input.btn-use-recipe:hover {
     width:80px;
 }
 
+.sub-side-asset-img img {
+	border-radius:4px;
+}
+
 .sub-asset-author {
     color: #a2a2a2;
     font-size: 10px;
 }
 
 .sub-side-asset-img img {
-    border-radius: 3px;
 }
 
 .sub-side-asset-desc {
@@ -1992,6 +2000,7 @@ input.btn-use-recipe:hover {
     color:#666;
     font-size:14px;
     font-weight: 200;
+	word-wrap:break-word;
 }
 
 .t-sub-side-asset a:hover {
@@ -2065,9 +2074,10 @@ a.tn-welcome {
 .h-page-title {
     font-weight:200;
     color:#333;
-    letter-spacing: -1px;
+    letter-spacing: 0px;
     margin-top:0;
     margin-bottom:10px;
+	font-size:22px;
 }
 
 .wr-recent-assets {
