@@ -1858,6 +1858,7 @@ input.btn-use-recipe:hover {
 
 .wr-ipaas .btn-recipe-store {
     margin-top:0;
+	border-radius:4px;
 }
 
 .wr-ip-left {
@@ -1950,13 +1951,13 @@ input.btn-use-recipe:hover {
     width:270px;
     padding:15px;
     background:#fff;
+	border:1px solid #f0f0f0;	
 }
 
 .wr-left {
     float:left;
-    width:650px;
+    width:670px;
     padding:0px 5px 15px 0px;
-
     border-radius: 8px;
 }
 
