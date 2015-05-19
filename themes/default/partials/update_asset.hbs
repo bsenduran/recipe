@@ -1,0 +1,17 @@
+{{#with assets}}
+<div class="well well-sm">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2">
+                <img src='{{this.tables.[0].fields.url.value}}/{{this.tables.[0].fields.thumbnail.value}}' class="" alt="Thumb"/>
+            </div>
+            <div class="col-lg-10">
+                <h1>{{name}}</h1>
+                <i class="fa fa-circle"></i> {{lifecycleState}}
+                <div class="well-description">{{tables.0.fields.createdtime.value}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/with}}
+{{> update_form .}}
