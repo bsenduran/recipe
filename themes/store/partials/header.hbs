@@ -27,12 +27,13 @@
                 {{#if cuser.username}}
                     <li>
                         <a href="{{url "/../publisher/asts/dish/dashboard"}}" class="btn-my-cafe">
-                            <i class="icon-coffee icon-white">&nbsp;</i>{{t "Dashboard"}}
+                            <span class="glyphicon glyphicon-dashboard" aria-hidden="true">&nbsp;</span>{{t "Dashboard"}}
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i
-                                class="icon-user"></i> {{cuser.username}} <b class="caret"></b></a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;</span>{{cuser.username}} <b class="caret"></b>
+                        </a>
                         <ul class="dropdown-menu dropdown-account" role="menu" aria-labelledby="dLabel">
                             <li>
                                 {{signout .}}

@@ -16,8 +16,11 @@
 
 <div class="assets-container" >
     <!-- Separator removed -->
+    <div class="well well-sm">
+        <h2>Integration Templates</h2>
+        <strong>Store Owner</strong> - <kbd>{{this.features.social.keys.urlDomain}}</kbd>
+    </div>
 
-    <h2 class="h-page-title">Integration Template Store</h2>
     {{#if assets}}
         <section>
             {{#each assets}}
@@ -37,12 +40,9 @@
                                         <div style="width:{{../ratingPx}}px"></div>
                                     </span>
                                 </div>
-                                <div class="pull-right">
-                                    <div class="dropdown dropdown-asset-custom">
-                                        <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle more-list" href="javascript:void(0)"></a>
-                                            <!--   Dropdown removed -->
-                                    </div>
-                                </div>
+
+                                    <!--   Dropdown removed -->
+
                             </div>
                         </div>
                     </div>
