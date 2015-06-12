@@ -1,14 +1,16 @@
-<div style="text-align:center">
-        {{#with assets}}
-            <input type="button" class="btn-use-recipe" onclick="goToRecipeApp()"
-                   data-toggle="modal"
-                   data-aid="{{id}}"
-                   data-type="{{type}}" value="{{t "Use This Integration Template"}}">
-            {{#attributes }}
-                <!--secondary ES publisher's url-->
-                <input id="redirectUrlToRecipeApp" type="hidden" value="{{url "/.."}}/publisher/asts/dish/create_dish?resources={{overview_url}}"/>
-            {{/attributes }}
-        {{/with}}
+<div class="action-container right float-left">
+
+    {{#with assets}}
+        <input type="button" class="blue-button margin-left float-left" onclick="goToRecipeApp()"
+               data-toggle="modal"
+               data-aid="{{id}}"
+               data-type="{{type}}" value="{{t "Use This Integration Template"}}">
+        {{#attributes }}
+            <!--secondary ES publisher's url-->
+            <input id="redirectUrlToRecipeApp" type="hidden" value="{{url "/.."}}/publisher/asts/dish/create_dish?resources={{overview_url}}"/>
+        {{/attributes }}
+    {{/with}}
+
 </div>
 
 <script>
@@ -17,3 +19,4 @@
         window.location.href = redirect;
     }
 </script>
+

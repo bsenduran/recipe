@@ -1,38 +1,57 @@
-<div class="wr-header" id="container-header">
-    <div class="wr-header-inner">
-    <div class="left-brand">
-        <a href="{{tenantedUrl "/"}}" class="brand"><span>iPaaS</span></a>
-    </div>
+<!--
+  ~ Copyright (c) 2014, WSO2 Inc. (http://wso2.com) All Rights Reserved.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!-- header -->
+<header>
+    <div class="row wr-global-header">
+        <div class="col-xs-7 col-sm-7 col-lg-8 app-logo">
+            <a href="{{tenantedUrl ""}}{{meta.landingPage}}">
+                <img src="{{url "/themes/store/img/logo.png"}}" />
+                <h2 class="app-title">Integration Cloud</h2>
+            </a>
+        </div>
+        <div class="col-xs-5 col-sm-5 col-lg-4  top-menu-right-custom">
+            <ul class="nav navbar-nav navbar-right">
+                {{#if cuser.username}}
+                    <li>
+                        <a href="{{url "/../publisher/asts/dish/dashboard"}}" class="btn-my-cafe">
+                            <i class="icon-coffee icon-white">&nbsp;</i>{{t "Dashboard"}}
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i
+                                class="icon-user"></i> {{cuser.username}} <b class="caret"></b></a>
+                        <ul class="dropdown-menu dropdown-account" role="menu" aria-labelledby="dLabel">
+                            <li>
+                                {{signout .}}
+                            </li>
+                        </ul>
 
-    <div class="right-links">
-        <div class="ctrl-tn">
+                    </li>
+                {{else}}
+                    {{authentication .}}
+                {{/if}}
 
-			{{#if cuser.username}}
-							<div class="btn-user-logged-in">
-							<span class="tn-sep"></span>
-								<a href="{{url "/../publisher/asts/dish/dashboard"}}" class="btn-my-cafe"><i class="icon-coffee icon-white">&nbsp;</i>{{t "Dashboard"}}</a>
-								<span class="tn-sep"></span>
-								<a href="#" class="tn-welcome"><i class="icon-user icon-white">&nbsp;</i>welcome, <b>{{cuser.username}} </b></a>
-								<span class="tn-sep"></span>
-								{{signout .}}
-							</div>
-							{{else}}
-							<div class="btn-user-not-logged-in">
-							    <span class="tn-sep"></span>
-								<a href="{{url "/login"}}" class="btn-sign-inx"><i class="icon-signin icon-white">&nbsp;</i>{{t "Sign in"}}</a>
-								<span class="tn-sep"></span>
-								<a href="{{url "/login"}}" id="btn-register" class="btn-registerx"><i class="icon-chevron-sign-up icon-white">&nbsp;</i>{{t "Register"}}</a>
-							</div>
-							{{/if}}
-
+            </ul>
         </div>
     </div>
-    </div>
-    <br class="c-both" />
-</div>
-
+</header>
+<!-- /header -->
 
 
 {{>login login}}
+
 {{>register}}
 
